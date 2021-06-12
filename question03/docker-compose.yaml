@@ -9,3 +9,9 @@ services:
     environment:
       - CSVSERVER_BORDER=orange
 
+  monitor:
+    image: prom/prometheus:v2.22.0
+    volumes:
+      - /prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090

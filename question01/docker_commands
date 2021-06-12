@@ -1,0 +1,6 @@
+1st we need to create a directory 
+
+1. mkdir /csvserver/inputdata
+2. docker run -v /csvserver/inputdata:/csvserver/inputdata infracloudio/csvserver:latest
+3. create a shell script 
+4. docker run -v /csvserver/inputFile:/csvserver/inputdata -p 9393:9300 -e CSVSERVER_BORDER=Orange infracloudio/csvserver:latest
